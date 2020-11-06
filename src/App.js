@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import List from './List.js'
 import Create from './Create.js'
+import Detail from './Detail.js'
 import './App.css';
 export default class App extends Component {
     render() {
@@ -23,6 +24,11 @@ export default class App extends Component {
                             path="/create"
                             exact
                             render={(routerProps) => <Create {...routerProps} />}
+                        />
+                        <Route
+                            path="/detail/:id"
+                            exact
+                            render={(routerProps) => <Detail {...routerProps} />}
                         />
 
 
