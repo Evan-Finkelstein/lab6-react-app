@@ -44,15 +44,17 @@ export default class App extends Component {
         <Link to="/Create">create</Link>
         {
           this.state.data.map(food =>
+            <div key={food.id}>
+              <Link to={`/detail/${food.id} `}>
+                <div className='food' >
+                  <p> name: {food.name}</p>
+                  <p> type: {food.type}</p>
 
-            <div className='food' key={food.id}>
-              <p> name: {food.name}</p>
-              <p> type: {food.type}</p>
+                  <p> Flavor level: {food.flavor}</p>
 
-              <p> Flavor level: {food.flavor}</p>
-
+                </div>
+              </Link>
             </div>
-
 
 
           )

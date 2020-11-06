@@ -25,7 +25,7 @@ export default class CreatePage extends Component {
             name: this.state.name,
 
             flavor: this.state.flavor,
-            is_good: true,
+            is_good: this.state.is_good,
             type_id: this.state.typeId,
             owner_id: user.userId
         };
@@ -59,8 +59,8 @@ export default class CreatePage extends Component {
                     <label>
                         Is it good?
                         <select onChange={e => this.setState({ is_good: e.target.value })}>
-                            <option value={true} > yes </option>
-                            <option value={false} > no </option>
+                            <option value="true" > yes </option>
+                            <option value="false" > no </option>
                         </select>
                     </label>
 
